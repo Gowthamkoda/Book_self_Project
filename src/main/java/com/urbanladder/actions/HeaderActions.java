@@ -11,7 +11,7 @@ import com.urbanladder.utils.HelperClass;
 
 public class HeaderActions {
 	WebElement driver;
-	Actions act ;
+	Actions handler = HelperClass.getHandler() ;
 	HeaderLocators headerLocators_Obj= null;
 	//Constructor   
 	public HeaderActions() {
@@ -22,7 +22,7 @@ public class HeaderActions {
 
 	//1)Checks for Search Input 
 	public boolean CheckSearch(){
-		return isDisplayed(headerLocators_Obj.search_Input);
+		return headerLocators_Obj.search_Input.isDisplayed();
 	}
 	//Search for "BookShelves"
 	public void SendInput(String input) {
@@ -31,7 +31,7 @@ public class HeaderActions {
 
 	//2)Checks for Search Button 
 	public boolean CheckSearchButton(){
-		return isDisplayed(headerLocators_Obj.search_Button);
+		return headerLocators_Obj.search_Button.isDisplayed();
 	}
 	//Click on Search Button
 	public void ClickSearchButton() {
@@ -40,16 +40,16 @@ public class HeaderActions {
 
 	//3)Check for Living Label 
 	public boolean CheckLivngLabel() {
-		return isDisplayed(headerLocators_Obj.living_Label);
+		return headerLocators_Obj.living_Label.isDisplayed();
 	}
 	//Mouse Hover to living
 	public void MoveToLivngLabel(){
-		act.moveToElement(headerLocators_Obj.living_Label);
+		handler.moveToElement(headerLocators_Obj.living_Label).perform();;
 	}
 
 	//4)Check for Chair and SubMenu
 	public boolean CheckChairMenu() {
-		return isDisplayed(headerLocators_Obj.Chair_Menu); 
+		return headerLocators_Obj.Chair_Menu.isDisplayed(); 
 	}
 	//Find SubMenus of Chair
 	public List<WebElement> ChairList(){
@@ -60,7 +60,7 @@ public class HeaderActions {
 
 	//5)Check for LvingStorage and SubMenu
 	public boolean CheckLivngStorageMenu() {
-		return isDisplayed(headerLocators_Obj.LivingStorage_Menu); 
+		return headerLocators_Obj.LivingStorage_Menu.isDisplayed(); 
 	}
 	//Find SubMenus of Living
 	public List<WebElement> LivingStorageList(){
@@ -71,19 +71,11 @@ public class HeaderActions {
 
 	//6)Checks for GiftCards Label
 	public boolean CheckGiftCards() {
-		return isDisplayed(headerLocators_Obj.giftCardS_Link);
+		return headerLocators_Obj.giftCardS_Link.isDisplayed();
 	} 
 	//Click on Gift Cards 
 	public void ClickGiftCards() {
 		headerLocators_Obj.giftCardS_Link.click();
 	}
 
-	
-	
-	
-	
-	private boolean isDisplayed(WebElement giftCardS_link) {
-
-		return false;
-	}
 }

@@ -5,6 +5,8 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class HelperClass {
@@ -18,6 +20,7 @@ public class HelperClass {
 
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
+		
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 	}      
@@ -36,6 +39,17 @@ public class HelperClass {
 
 			helperClass = new HelperClass();
 		}
+	}
+	
+	public static WebDriverWait getWait(long timeDelay) {
+		return new WebDriverWait(driver, Duration.ofSeconds(timeDelay));
+	}
+	
+	public static Actions getHandler() {
+		return new Actions(driver);
+	}
+	public static String getUrl() {
+		return driver.getCurrentUrl();
 	}
 
 	public static void tearDown() {
