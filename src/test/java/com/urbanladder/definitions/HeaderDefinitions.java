@@ -1,5 +1,6 @@
 package com.urbanladder.definitions;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import com.urbanladder.actions.BookshelvesPageActions;
@@ -11,7 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class homePageDefinitions {
+public class HeaderDefinitions {
 
 	HeaderActions objHeaderAction = new HeaderActions();
 	BookshelvesPageActions objBookShelfPageAction = new BookshelvesPageActions();
@@ -23,7 +24,14 @@ public class homePageDefinitions {
 	}
 	@Given("handle banner")
 	public void handle_banner() {
-		
+		//HelperClass.getDriver().findElement(By.xpath("//*[@class='close-reveal-modal hide-mobile']")).click();
+		try {
+			Assert.assertEquals(objBookShelfPageAction.checkPopupBanner(), true,"Popup not found");
+			objBookShelfPageAction.closePopup();
+		}catch (AssertionError e) {
+			
+			System.err.println(e.getMessage());
+		}
 		
 	}
 	
@@ -38,8 +46,8 @@ public class homePageDefinitions {
 		Assert.assertEquals(objHeaderAction.CheckSearchButton(), true, "Search button not found");
 		objHeaderAction.ClickSearchButton();
 		}catch (AssertionError e) {
-			System.err.println(e);
-			searched_for_bookshelves();
+			System.err.println(e.getMessage());
+			
 		}
 	}
 	@Then("display searched results")
@@ -49,8 +57,8 @@ public class homePageDefinitions {
 			
 		}catch (AssertionError e) {
 			
-			System.err.println(e);
-			display_searched_results();
+			System.err.println(e.getMessage());
+			
 		}
 		
 	}

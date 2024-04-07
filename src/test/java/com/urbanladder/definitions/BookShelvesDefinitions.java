@@ -1,5 +1,5 @@
 package com.urbanladder.definitions;
 
-public class BookShelfDefinitions {
+public class BookShelvesDefinitions {
 
 }

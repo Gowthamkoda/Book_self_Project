@@ -36,9 +36,21 @@ public class BookshelvesPageLocators {
 
 
 	//Results
-	@FindAll({@FindBy(xpath = "//*[@itemprop='name' and @class='name']")}) public List<WebElement> Results;	
+	//ProductName
+	@FindAll({@FindBy(xpath = "//div[@class='product-title product-title-sofa-mattresses']/span")}) public List<WebElement> ProductName;
+	//Published By
+	@FindAll({@FindBy(xpath = "//div[@class=\"product-title product-title-sofa-mattresses\"]//div[2]/div")}) public List<WebElement> PublishedBy;
+	//Discount Price
+	@FindAll({@FindBy(xpath = "//div[@class=\"price-number\"]/span")}) public List<WebElement> DiscountPrice;
+	//Original Price
+	@FindAll({@FindBy(xpath = "//div[@class=\"price-number\"]/strike")}) public List<WebElement> OriginalPrice;
+	//EMi
+	@FindAll({@FindBy(xpath = "//span[@class='link-color']")}) public List<WebElement> EMiFrom;
+	
 
+	//Popup Banner 
+	@FindBy(xpath="//*[@id='login_dialog']") public WebElement Popup;
 	//Close Popup Element	
-	@FindBy(xpath="//a[contains(text(),'Close')]")  public WebElement closePopuP;
+	@FindBy(xpath="//a[contains(text(),'Close')]")  public WebElement closePopup;
 
 }

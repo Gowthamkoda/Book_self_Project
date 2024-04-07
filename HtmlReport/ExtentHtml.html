@@ -48,7 +48,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Apr 6, 2024 07:09:46 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Apr 7, 2024 03:42:46 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -63,7 +63,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -107,12 +107,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
-                    <span class='strong'>0</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>1</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -125,12 +125,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
-                    <span class='strong'>0</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>1</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -145,14 +145,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
-                    <span class='strong'>0</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>4</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
-                    1</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='75%'>
-                    3</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -173,11 +173,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Home page scenarios</span>
-						<span class='test-time'>Apr 6, 2024 07:09:47 PM</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>Apr 7, 2024 03:42:51 PM</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,39 +187,35 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 00.023</span>
+	<span class='duration right label'>00 00 06.323</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Search for bookshelves</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Search for bookshelves</div>
 	</div>
 	
 	
 	
 	<ul class='steps'>
-		<li test-id='3' class='node given Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given navigate to home page</div>
+		<li test-id='3' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.navigate_to_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given navigate to home page</div>
 
 
-					<div class="node-step">Step undefined</div>
 		</li>
-		<li test-id='4' class='node and Skip' status='Skip'>
-			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And handle banner</div>
+		<li test-id='4' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.searched_for_bookshelves())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When searched for bookshelves</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='5' class='node when Skip' status='Skip'>
-			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When searched for bookshelves</div>
+		<li test-id='5' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.handle_banner())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And handle banner</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='6' class='node then Skip' status='Skip'>
-			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then display searched results</div>
+		<li test-id='6' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.display_searched_results())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then display searched results</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -273,19 +269,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 6, 2024 07:09:46 PM</div>
+					<div class='panel-lead'>Apr 7, 2024 03:42:46 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 6, 2024 07:09:48 PM</div>
+			 		<div class='panel-lead'>Apr 7, 2024 03:42:57 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 01.095</div>
+					<div class='panel-lead'>00 00 11.207</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -317,34 +313,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 1,
-				passChild: 0,
-				failChild: 1,
+				passChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 4,
-				passGrandChild: 0,
-				failGrandChild: 1,
+				passGrandChild: 4,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 3,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Home page scenarios":0.027
+			        "Home page scenarios":6.329
 			};
 		</script>
 		

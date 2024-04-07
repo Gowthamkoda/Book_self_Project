@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.urbanladder.locators.BookshelvesPageLocators;
 import com.urbanladder.utils.HelperClass;
@@ -23,10 +24,18 @@ public class BookshelvesPageActions {
 	}
 	
 	public boolean checkBookShelfUrl() {
-		return HelperClass.getUrl().contains("BookShelves");
+		
+		return HelperClass.getWait(10).until(ExpectedConditions.urlContains("BookShelves"));
 		
 	}
-	
+	//Check for Popup 
+	public boolean checkPopupBanner(){
+	return bookshelvespagelocator_Obj.Popup.isDisplayed();
+	}
+	//Close Popup
+	public void closePopup() {
+		bookshelvespagelocator_Obj.closePopup.click();
+	}
 	//Checks for Prize 
 	public boolean CheckPrizeFilter() {
 		return bookshelvespagelocator_Obj.price_Filter.isDisplayed();
@@ -98,14 +107,47 @@ public class BookshelvesPageActions {
 	
 	
 	//Check and return the Results Displayed
-	public List<WebElement> Results() {
+	public List<WebElement> ProductName() {
 		try{
-			return bookshelvespagelocator_Obj.Results;
+			return bookshelvespagelocator_Obj.ProductName;
 		}catch(Exception e) {
 			System.out.println("No Results Found to Display");
 			return null;
 		}
 	}
+	public List<WebElement> PublishedBy() {
+		try{
+			return bookshelvespagelocator_Obj.PublishedBy;
+		}catch(Exception e) {
+			System.out.println("No Results Found to Display");
+			return null;
+		}
+	}
+	public List<WebElement> DiscountPrice() {
+		try{
+			return bookshelvespagelocator_Obj.DiscountPrice;
+		}catch(Exception e) {
+			System.out.println("No Results Found to Display");
+			return null;
+		}
+	}
+	public List<WebElement> OriginalPrice() {
+		try{
+			return bookshelvespagelocator_Obj.OriginalPrice;
+		}catch(Exception e) {
+			System.out.println("No Results Found to Display");
+			return null;
+		}
+	}
+	public List<WebElement> EMI() {
+		try{
+			return bookshelvespagelocator_Obj.EMiFrom;
+		}catch(Exception e) {
+			System.out.println("No Results Found to Display");
+			return null;
+		}
+	}
+	
 	
 }
 	

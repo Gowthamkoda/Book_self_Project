@@ -5,8 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 //		tags = "",
-		dryRun = true,
-		features = "src/test/resources/features",
+//		dryRun = true,
+		features = "./src/test/resources/features/Header.feature",
 		glue = "com.urbanladder.definitions",
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 

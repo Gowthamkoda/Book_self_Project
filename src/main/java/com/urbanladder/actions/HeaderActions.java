@@ -35,7 +35,7 @@ public class HeaderActions {
 	}
 	//Click on Search Button
 	public void ClickSearchButton() {
-		headerLocators_Obj.giftCardS_Link.click();
+		headerLocators_Obj.search_Button.click();
 	}
 
 	//3)Check for Living Label 
