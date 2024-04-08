@@ -28,7 +28,7 @@ public class Hooks {
 	}
 
 
-//	@After
+//	@AfterAll
 	public static void tearDown() {		
 		HelperClass.tearDown();
 	}

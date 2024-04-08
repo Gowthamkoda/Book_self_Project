@@ -18,7 +18,8 @@ public class BookshelvesPageLocators {
 
 
 	//Price Filter 
-	@FindBy(xpath="//div[normalize-space()='Price']")
+//	@FindBy(xpath="//div[normalize-space()='Price']")
+	@FindBy(xpath="(//div[@class='gname'])[2]")
 	public WebElement price_Filter;
 
 	//Right Dragger

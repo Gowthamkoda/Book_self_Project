@@ -7,14 +7,15 @@ import com.urbanladder.locators.GiftCardSPageLocators;
 import com.urbanladder.utils.HelperClass;
 
 public class GiftCardSPageAction {
-	GiftCardSPageLocators giftcardspageLocators_Obj;
+	GiftCardSPageLocators giftcardspageLocators_Obj = null;
 	Select monthDate;
-//Constructor
+	
+	//Constructor
 	public GiftCardSPageAction() {
-	giftcardspageLocators_Obj=new GiftCardSPageLocators();
-	PageFactory.initElements(HelperClass.getDriver(), giftcardspageLocators_Obj);
-}
-//Check for GiftCard Label Link
+		this.giftcardspageLocators_Obj=new GiftCardSPageLocators();
+		PageFactory.initElements(HelperClass.getDriver(), giftcardspageLocators_Obj);
+	}
+	//Check for GiftCard Label Link
 	public boolean CheckGiftCardLabel() {
 		return giftcardspageLocators_Obj.giftCards_Label.isDisplayed();
 	}
@@ -82,7 +83,7 @@ public class GiftCardSPageAction {
 	public void EnterRecipientMobile(String mobile) {
 		giftcardspageLocators_Obj.recipientsMobile_Input.sendKeys(mobile);
 	}
-	
+
 	//From
 	//1)Check for Your Name
 	public boolean CheckForYourName() {
@@ -114,7 +115,7 @@ public class GiftCardSPageAction {
 	}
 	//Enter Your Address
 	public void EnterYourAddress(String address) {
-		 giftcardspageLocators_Obj.Address_Input.sendKeys(address);
+		giftcardspageLocators_Obj.Address_Input.sendKeys(address);
 	}
 	//5)Check for Your pincode
 	public boolean CheckForYourPincode() {
@@ -122,7 +123,7 @@ public class GiftCardSPageAction {
 	}
 	//Enter Your Pincode 
 	public void EnterYourPincode(String pincode) {
-		 giftcardspageLocators_Obj.pincode_Input.sendKeys(pincode);
+		giftcardspageLocators_Obj.pincode_Input.sendKeys(pincode);
 	}
 	//Check for Messge Input box 
 	public boolean CheckForMsgBox() {
@@ -130,7 +131,7 @@ public class GiftCardSPageAction {
 	}
 	//Enter Message 
 	public void EnterMsg(String msg) {
-		 giftcardspageLocators_Obj.Message_Input.sendKeys(msg);
+		giftcardspageLocators_Obj.Message_Input.sendKeys(msg);
 	}
 	//Check For Confirm Button
 	public boolean CheckForConfirm() {
@@ -138,6 +139,6 @@ public class GiftCardSPageAction {
 	}
 	//Click On Confirm Button
 	public void ClickOnConfirm() {
-		 giftcardspageLocators_Obj.Confirm_button.click();
+		giftcardspageLocators_Obj.Confirm_button.click();
 	}
 }

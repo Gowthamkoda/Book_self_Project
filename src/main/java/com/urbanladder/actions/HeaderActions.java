@@ -10,7 +10,7 @@ import com.urbanladder.locators.HeaderLocators;
 import com.urbanladder.utils.HelperClass;
 
 public class HeaderActions {
-	WebElement driver;
+	
 	Actions handler = HelperClass.getHandler() ;
 	HeaderLocators headerLocators_Obj= null;
 	//Constructor   

@@ -1,6 +1,5 @@
 package com.urbanladder.definitions;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import com.urbanladder.actions.BookshelvesPageActions;
@@ -24,9 +23,7 @@ public class HeaderDefinitions {
 	}
 	@Given("handle banner")
 	public void handle_banner() {
-		//HelperClass.getDriver().findElement(By.xpath("//*[@class='close-reveal-modal hide-mobile']")).click();
 		try {
-			Assert.assertEquals(objBookShelfPageAction.checkPopupBanner(), true,"Popup not found");
 			objBookShelfPageAction.closePopup();
 		}catch (AssertionError e) {
 			
@@ -34,10 +31,10 @@ public class HeaderDefinitions {
 		}
 		
 	}
-	
-	@When("searched for bookshelves")
+//	@Given("retrive any one SubMenu data from living menu")
+	@When("search for bookshelves")
 	public void searched_for_bookshelves() {
-		// TODO: check whether fn name crt
+		
 		try {
 		
 		Assert.assertEquals(objHeaderAction.CheckSearch(), true,"Search input not found");

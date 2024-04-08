@@ -13,24 +13,23 @@ import com.urbanladder.utils.HelperClass;
 public class BookshelvesPageActions {
 	
 	Actions handler = HelperClass.getHandler();
-	BookshelvesPageLocators bookshelvespagelocator_Obj;
-	
-	
-	
+	BookshelvesPageLocators bookshelvespagelocator_Obj = null;
+
+
 	public BookshelvesPageActions() {
 		this.bookshelvespagelocator_Obj = new BookshelvesPageLocators();
 		PageFactory.initElements(HelperClass.getDriver(),bookshelvespagelocator_Obj);
-	
+
 	}
-	
+
 	public boolean checkBookShelfUrl() {
-		
+
 		return HelperClass.getWait(10).until(ExpectedConditions.urlContains("BookShelves"));
-		
+
 	}
 	//Check for Popup 
 	public boolean checkPopupBanner(){
-	return bookshelvespagelocator_Obj.Popup.isDisplayed();
+		return bookshelvespagelocator_Obj.Popup.isDisplayed();
 	}
 	//Close Popup
 	public void closePopup() {
@@ -42,9 +41,10 @@ public class BookshelvesPageActions {
 	}
 	//MouseHover to Prize Filter 
 	public void MovetoPrizeFilter() {
-		handler.moveToElement(bookshelvespagelocator_Obj.price_Filter);
+		HelperClass.getWait(20).until(ExpectedConditions.visibilityOf(bookshelvespagelocator_Obj.price_Filter));
+		handler.moveToElement(bookshelvespagelocator_Obj.price_Filter).perform();
 	}
-	
+
 	//Check for Right Dragger 
 	public boolean CheckRightDragger() {
 		return bookshelvespagelocator_Obj.Right_Dragger.isDisplayed();
@@ -52,16 +52,24 @@ public class BookshelvesPageActions {
 	//Drag And Set the Price to 15000
 	public void DragAndSet() {
 		handler.dragAndDropBy(bookshelvespagelocator_Obj.Right_Dragger, -211, 0).perform();
-		
+
 	}
 	//Check For Category Filter
 	public boolean CheckCategoryFilter() {
 		return bookshelvespagelocator_Obj.category_Filter.isDisplayed();
 	}
-	
+
 	//Mouse Hover to Category 
 	public void MoveToCategory() {
-		bookshelvespagelocator_Obj.category_Filter.click();
+		HelperClass.getWait(20).until(ExpectedConditions.visibilityOf(bookshelvespagelocator_Obj.category_Filter));
+		handler.moveToElement(bookshelvespagelocator_Obj.category_Filter).build().perform();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 	//Check For WallShelves or  Kid Bookshelves 
 	public boolean CheckIsElementClickable() {
@@ -73,6 +81,7 @@ public class BookshelvesPageActions {
 	//Click  WallShelves or  Kid Bookshelves 
 	public void ClickItems() {
 		try {
+			Thread.sleep(2000);
 			bookshelvespagelocator_Obj.Kid_Bookshelves_CheckBox.click();
 		}catch (Exception e) {
 
@@ -86,7 +95,7 @@ public class BookshelvesPageActions {
 	}
 	//Click Out Of Stock 
 	public void ExcludeOutOfStock() {
-			bookshelvespagelocator_Obj.outOfStock_CheckBox.click();
+		bookshelvespagelocator_Obj.outOfStock_CheckBox.click();
 	}
 	//Check For SortBy DropDown
 	public boolean CheckDropDown() {
@@ -94,7 +103,7 @@ public class BookshelvesPageActions {
 	}
 	//House Hover to DropDown
 	public void MovetoDropDown() {
-		handler.moveToElement(bookshelvespagelocator_Obj.SortBy_DropDown);
+		handler.moveToElement(bookshelvespagelocator_Obj.SortBy_DropDown).perform();;
 	}
 	//Check For High To Low Option
 	public boolean CheckHightoLow() {
@@ -104,8 +113,8 @@ public class BookshelvesPageActions {
 	public void ClickHighToLow() {
 		bookshelvespagelocator_Obj.HighToLow_Option.click();
 	}
-	
-	
+
+
 	//Check and return the Results Displayed
 	public List<WebElement> ProductName() {
 		try{
@@ -147,12 +156,13 @@ public class BookshelvesPageActions {
 			return null;
 		}
 	}
-	
-	
-}
-	
 
-	
-	
-	
+
+
+}
+
+
+
+
+
 

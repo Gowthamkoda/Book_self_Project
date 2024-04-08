@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class GiftCardSPageLocators {
 
 	//Gift Card Lable Link
-	@FindBy(xpath="//a[contains(text(),'Gift Cards')]") public WebElement giftCards_Label;
+	@FindBy(xpath="(//a[@class='featuredLinksBar__link'])[3]") public WebElement giftCards_Label;
 	//Birthday/ Anniversary Link
 	@FindBy(xpath="(//li[@class='_11b4v'])[3]") public WebElement Birthday_AnniversaryGift;
 	

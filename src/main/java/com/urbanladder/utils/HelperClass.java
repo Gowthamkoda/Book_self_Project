@@ -8,21 +8,25 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class HelperClass {
 
 	private static HelperClass helperClass;
 
 	private static WebDriver driver; 
-	public final static int TIMEOUT = 10;
+	public final static int TIMEOUT = 30;
 
 	private HelperClass() {
 
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--start-maximized");
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--start-maximized");
 		
-		driver = new ChromeDriver(options);
+		driver = WebDriverManager.chromedriver().create();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
+//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TIMEOUT));
 	}      
 
 	public static void openPage(String url) {

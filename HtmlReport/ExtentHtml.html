@@ -39,6 +39,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -48,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Apr 7, 2024 03:42:46 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Apr 8, 2024 09:38:05 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -63,7 +64,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -107,12 +108,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    3</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -125,12 +126,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='tooltipped' data-position='top' data-tooltip='25%'>
                     <span class='strong'>1</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='75%'>
+                    3</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -145,14 +146,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>4</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='40%'>
+                    <span class='strong'>10</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12%'>
+                    3</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='48%'>
+                    12</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -173,11 +174,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Home page scenarios</span>
-						<span class='test-time'>Apr 7, 2024 03:42:51 PM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>Apr 8, 2024 09:38:09 AM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,11 +188,11 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 06.323</span>
+	<span class='duration right label'>00 00 06.857</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Search for bookshelves</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Search for bookshelves</div>
 	</div>
 	
 	
@@ -203,7 +204,7 @@
 
 		</li>
 		<li test-id='4' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.searched_for_bookshelves())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When searched for bookshelves</div>
+			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.searched_for_bookshelves())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When search for bookshelves</div>
 
 
 		</li>
@@ -212,10 +213,244 @@
 
 
 		</li>
-		<li test-id='6' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.display_searched_results())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then display searched results</div>
+		<li test-id='6' class='node and Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And retrive any one SubMenu data from living menu</div>
 
 
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='7' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.urbanladder.definitions.HeaderDefinitions.display_searched_results())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then display searched results</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>BookShelf Scenarios in UrbanLadder Application</span>
+						<span class='test-time'>Apr 8, 2024 09:38:16 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='9' status='fail'>
+
+	<span class='duration right label'>00 00 00.256</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Search BookShelves and Display the Results</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='10' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(com.urbanladder.definitions.BookShelvesDefinitions.filter_bookshelves_below_rs())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Filter  Bookshelves below Rs15000</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLDivElement] has no size and location
+  (Session info: chrome=120.0.6099.130)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21c1e18128b7c67fa459ab9323c32a4a, actions {actions=[org.openqa.selenium.interactions.Sequence@343fddd9]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56530/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21c1e18128b7c67fa459ab9323c32a4a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:605)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:603)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:568)
+	at com.urbanladder.actions.BookshelvesPageActions.DragAndSet(BookshelvesPageActions.java:54)
+	at com.urbanladder.definitions.BookShelvesDefinitions.filter_bookshelves_below_rs(BookShelvesDefinitions.java:32)
+	at ✽.Filter  Bookshelves below Rs15000(file:///C:/Users/2318301/OneDrive%20-%20Cognizant/Book_Shelf_Project/src/test/resources/features/fea2.feature:4)
+</textarea>
+		</li>
+		<li test-id='11' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.urbanladder.definitions.BookShelvesDefinitions.exclude_out_of_stock())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And exclude out of stock</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='12' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.urbanladder.definitions.BookShelvesDefinitions.select_anyone_category_like_wall_shelves_kid_bookshelves_study_tables_etc())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Select anyone Category (like Wall Shelves / Kid Bookshelves / Study Tables, etc)</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='13' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.urbanladder.definitions.BookShelvesDefinitions.sort_by_price())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Sort by price High to Low</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='14' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(com.urbanladder.definitions.BookShelvesDefinitions.fetched_the_top_items(java.lang.Integer))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When fetched the items</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='15' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.urbanladder.definitions.BookShelvesDefinitions.print_all_details_in_console_output())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then print all details in console output</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Gift Card Scenarios</span>
+						<span class='test-time'>Apr 8, 2024 09:38:16 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='17' status='fail'>
+
+	<span class='duration right label'>00 00 57.285</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Enter Gift Card Details</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Amount</td><td>To_name</td><td>To_Email</td><td>To_Phone</td><td>From_name</td><td>From_Email</td><td>From_Phone</td><td>Address</td><td>Pincode</td><td>Message</td></tr><tr><td>1000</td><td>Ram</td><td>ram@gmail.com</td><td>9876543201</td><td>Raju</td><td>raju@gmail.com</td><td>9876543210</td><td>Chennai</td><td>600001</td><td>Vaild Email</td></tr><tr><td>1000</td><td>Ram</td><td>ram@gmail.com</td><td>9876543201</td><td>Raju</td><td>rajugmail.com</td><td>9876543210</td><td>Chennai</td><td>600001</td><td>Invaild Email</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='18' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Enter Gift Card Details</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='19' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.click_on_gift_cards_label()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Click on GiftCards Label</h6>
+
+				</li>
+				<li test-id='20' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.select_birthday_anniversary_option()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Select Birthday/Anniversary Option</h6>
+
+				</li>
+				<li test-id='21' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.enter_amount_and_select_date_and_month(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter Amount "1000" and Select Date and Month</h6>
+
+				</li>
+				<li test-id='22' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.fill_to_details(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Fill To "Ram", "ram@gmail.com", "9876543201" details</h6>
+
+				</li>
+				<li test-id='23' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.fill_from_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Fill From  "Raju", "raju@gmail.com", "9876543210", "Chennai", "600001" details</h6>
+
+				</li>
+				<li test-id='24' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.confirm_button_clicked()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Confirm button Clicked</h6>
+
+				</li>
+				<li test-id='25' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.display(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validate the Displayed Details  "Ram", "ram@gmail.com", "9876543201", "Raju", "raju@gmail.com", "9876543210", "Chennai", "600001", "Vaild Email", "1000"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='26' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Enter Gift Card Details</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='27' class='gc given Fail' status='Fail'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.click_on_gift_cards_label()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Click on GiftCards Label</h6>
+
+							<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@class='featuredLinksBar__link'])[3]"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21c1e18128b7c67fa459ab9323c32a4a, findElement {value=(//a[@class='featuredLinksBar__link'])[3], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56530/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21c1e18128b7c67fa459ab9323c32a4a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.urbanladder.actions.GiftCardSPageAction.ClickOngiftCard(GiftCardSPageAction.java:24)
+	at com.urbanladder.definitions.GiftCardsDefinitions.click_on_gift_cards_label(GiftCardsDefinitions.java:16)
+	at ✽.Click on GiftCards Label(file:///C:/Users/2318301/OneDrive%20-%20Cognizant/Book_Shelf_Project/src/test/resources/features/fea3.feature:4)
+</textarea>
+				</li>
+				<li test-id='28' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.select_birthday_anniversary_option()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Select Birthday/Anniversary Option</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='29' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.enter_amount_and_select_date_and_month(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Enter Amount "1000" and Select Date and Month</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='30' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.fill_to_details(java.lang.String,java.lang.String,java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Fill To "Ram", "ram@gmail.com", "9876543201" details</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='31' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.fill_from_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Fill From  "Raju", "rajugmail.com", "9876543210", "Chennai", "600001" details</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='32' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.confirm_button_clicked()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When Confirm button Clicked</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='33' class='gc then Skip' status='Skip'>
+					<h6 class="step-name" title="com.urbanladder.definitions.GiftCardsDefinitions.display(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Validate the Displayed Details  "Ram", "ram@gmail.com", "9876543201", "Raju", "rajugmail.com", "9876543210", "Chennai", "600001", "Invaild Email", "1000"</h6>
+
+							<div class="node-step">Step skipped</div>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
@@ -243,7 +478,147 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.ElementNotInteractableException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 8, 2024 09:38:16 AM</td>
+										<td class='linked' test-id='10'>Given Filter  Bookshelves below Rs15000</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLDivElement] has no size and location
+  (Session info: chrome=120.0.6099.130)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21c1e18128b7c67fa459ab9323c32a4a, actions {actions=[org.openqa.selenium.interactions.Sequence@343fddd9]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56530/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21c1e18128b7c67fa459ab9323c32a4a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:605)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:603)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:568)
+	at com.urbanladder.actions.BookshelvesPageActions.DragAndSet(BookshelvesPageActions.java:54)
+	at com.urbanladder.definitions.BookShelvesDefinitions.filter_bookshelves_below_rs(BookShelvesDefinitions.java:32)
+	at ✽.Filter  Bookshelves below Rs15000(file:///C:/Users/2318301/OneDrive%20-%20Cognizant/Book_Shelf_Project/src/test/resources/features/fea2.feature:4)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 8, 2024 09:38:44 AM</td>
+										<td class='linked' test-id='27'>Given Click on GiftCards Label</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@class='featuredLinksBar__link'])[3]"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21c1e18128b7c67fa459ab9323c32a4a, findElement {value=(//a[@class='featuredLinksBar__link'])[3], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56530/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21c1e18128b7c67fa459ab9323c32a4a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.urbanladder.actions.GiftCardSPageAction.ClickOngiftCard(GiftCardSPageAction.java:24)
+	at com.urbanladder.definitions.GiftCardsDefinitions.click_on_gift_cards_label(GiftCardsDefinitions.java:16)
+	at ✽.Click on GiftCards Label(file:///C:/Users/2318301/OneDrive%20-%20Cognizant/Book_Shelf_Project/src/test/resources/features/fea3.feature:4)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -251,37 +626,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Steps
 					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>25</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 7, 2024 03:42:46 PM</div>
+					<div class='panel-lead'>Apr 8, 2024 09:38:05 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 7, 2024 03:42:57 PM</div>
+			 		<div class='panel-lead'>Apr 8, 2024 09:39:14 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 11.207</div>
+					<div class='panel-lead'>00 01 08.495</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -312,35 +687,35 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+                parentCount: 3,
+				passParent: 0,
+				failParent: 3,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 1,
+				childCount: 4,
 				passChild: 1,
-				failChild: 0,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 4,
-				passGrandChild: 4,
-				failGrandChild: 0,
+				grandChildCount: 25,
+				passGrandChild: 10,
+				failGrandChild: 3,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 12,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Home page scenarios":6.329
+			        "Home page scenarios":6.86,"BookShelf Scenarios in UrbanLadder Application":0.256,"Gift Card Scenarios":57.285
 			};
 		</script>
 		
