@@ -1,7 +1,6 @@
 Feature: Gift Card Scenarios
 
-  Scenario Outline:
-: Enter Gift Card Details
+  Scenario Outline: Enter Gift Card Details
     Given navigate to home page
     And Click on GiftCards Label
     And Select Birthday/Anniversary Option
