@@ -139,6 +139,9 @@ public class GiftCardSPageAction {
 	}
 	//Click On Confirm Button
 	public void ClickOnConfirm() {
+		HelperClass.getHandler().scrollToElement(giftcardspageLocators_Obj.Confirm_button);
+		HelperClass.sleep(2000);
 		giftcardspageLocators_Obj.Confirm_button.click();
+		HelperClass.sleep(2000);
 	}
 }

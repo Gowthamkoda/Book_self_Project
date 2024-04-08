@@ -33,7 +33,7 @@ public class GiftCardSPageLocators {
 	//From
 	//Your Name
 	@FindBy(xpath="//input[@id='ip_1082986083']") public WebElement yourName_Input;
-	//Your Email
+	
 	@FindBy(xpath="//input[@id='ip_4081352456']") public WebElement yourEmail_Input;
 	//Your Mobile 
 	@FindBy(xpath="//input[@id='ip_2121573464']") public  WebElement yourMobile_Input;

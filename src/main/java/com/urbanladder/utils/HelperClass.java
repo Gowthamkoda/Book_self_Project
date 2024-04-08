@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -19,14 +20,9 @@ public class HelperClass {
 	public final static int TIMEOUT = 30;
 
 	private HelperClass() {
-
-//		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("--start-maximized");
-		
-		driver = WebDriverManager.chromedriver().create();
+	driver = WebDriverManager.chromedriver().create();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
-//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TIMEOUT));
 	}      
 
 	public static void openPage(String url) {
@@ -64,6 +60,18 @@ public class HelperClass {
 		}
 
 		helperClass = null;
-	} 
+	}
+	
+	public static void sleep(long time) {
+		try {
+			Thread.sleep(time);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void log(Scenario scenario, String data) {
+		scenario.attach(data, "text/plain", "data");
+	}
 
 }

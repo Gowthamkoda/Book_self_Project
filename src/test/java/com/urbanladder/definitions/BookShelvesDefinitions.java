@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.urbanladder.actions.BookshelvesPageActions;
+import com.urbanladder.utils.HelperClass;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,14 +24,9 @@ public class BookShelvesDefinitions {
 	BookshelvesPageActions bookshelvespageactionsObj= new BookshelvesPageActions();
 	@Given("Filter  Bookshelves below Rs15000")
 	public void filter_bookshelves_below_rs() {
-		try {
-			
+		
 			bookshelvespageactionsObj.MovetoPrizeFilter();
 			bookshelvespageactionsObj.DragAndSet();
-		} catch (AssertionError e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		
 	}
@@ -41,18 +37,20 @@ public class BookShelvesDefinitions {
 	}
 	@Given("Select anyone Category \\(like Wall Shelves \\/ Kid Bookshelves \\/ Study Tables, etc)")
 	public void select_anyone_category_like_wall_shelves_kid_bookshelves_study_tables_etc() {
+		HelperClass.sleep(2000);
 		bookshelvespageactionsObj.MoveToCategory();
 		bookshelvespageactionsObj.ClickItems();
 		
 	}
 	@Given("Sort by price High to Low")
 	public void sort_by_price() {
+		HelperClass.sleep(2000);
 		bookshelvespageactionsObj.MovetoDropDown();
 		bookshelvespageactionsObj.ClickHighToLow();
 		
 	}
 	@When("fetched the items")
-	public void fetched_the_top_items(Integer int1) {
+	public void fetched_the_top_items() {
 		ProductName = bookshelvespageactionsObj.ProductName();
 		PublishedBy =bookshelvespageactionsObj.PublishedBy();
 		DiscountPrice =bookshelvespageactionsObj.DiscountPrice();
@@ -69,5 +67,6 @@ public class BookShelvesDefinitions {
 			System.out.println("OriginalPrice: "+OriginalPrice.get(i).getText());
 			System.out.println("EMiFrom "+EMiFrom.get(i).getText()+"\n");
 			}
+		HelperClass.sleep(2000);
 	}
 }

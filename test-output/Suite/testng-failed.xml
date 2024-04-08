@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="ExtentReport5 for Cucumber7(failed)">
     <classes>
-      <class name="com.urbanladder.runner.CucumberRunnerTests">
+      <class name="com.urbanladder.runner.UrbanTestRunner">
         <methods>
-          <include name="runScenario" invocation-numbers="1 2 3 4 5 6 7"/>
+          <include name="runScenario" invocation-numbers="2 3"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.urbanladder.runner.CucumberRunnerTests -->
+      </class> <!-- com.urbanladder.runner.UrbanTestRunner -->
     </classes>
   </test> <!-- ExtentReport5 for Cucumber7(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -44,7 +44,10 @@ public class HeaderActions {
 	}
 	//Mouse Hover to living
 	public void MoveToLivngLabel(){
-		handler.moveToElement(headerLocators_Obj.living_Label).perform();;
+		handler.scrollToElement(headerLocators_Obj.giftCardS_Link).build().perform();
+		HelperClass.sleep(2000);
+		handler.moveToElement(headerLocators_Obj.living_Label).build().perform();
+		HelperClass.sleep(2000);
 	}
 
 	//4)Check for Chair and SubMenu

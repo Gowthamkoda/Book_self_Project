@@ -1,11 +1,15 @@
 package com.urbanladder.definitions;
 
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.urbanladder.actions.BookshelvesPageActions;
 import com.urbanladder.actions.HeaderActions;
 import com.urbanladder.utils.HelperClass;
 
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,6 +24,7 @@ public class HeaderDefinitions {
 		
 		HelperClass.openPage("https://www.urbanladder.com/");
 		
+		
 	}
 	@Given("handle banner")
 	public void handle_banner() {
@@ -31,7 +36,17 @@ public class HeaderDefinitions {
 		}
 		
 	}
-//	@Given("retrive any one SubMenu data from living menu")
+	@Given("retrive any one SubMenu data from living menu")
+	public void LivingSubMenu(){
+		
+		HelperClass.sleep(2000);
+		objHeaderAction.MoveToLivngLabel();
+		List<WebElement> chairList = objHeaderAction.ChairList();
+		for (WebElement chair : chairList) {
+			System.out.println("Chair SubMenu: " + chair.getText());
+		}
+	}
+	
 	@When("search for bookshelves")
 	public void searched_for_bookshelves() {
 		

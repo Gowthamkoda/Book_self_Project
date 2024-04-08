@@ -4,7 +4,7 @@
   <test name="ExtentReport5 for Cucumber7">
    
   <classes>
-  <class name = "com.urbanladder.runner.CucumberRunnerTests"/>
+  <class name = "com.urbanladder.runner.UrbanTestRunner"/>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

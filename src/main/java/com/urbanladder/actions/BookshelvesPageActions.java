@@ -42,7 +42,7 @@ public class BookshelvesPageActions {
 	//MouseHover to Prize Filter 
 	public void MovetoPrizeFilter() {
 		HelperClass.getWait(20).until(ExpectedConditions.visibilityOf(bookshelvespagelocator_Obj.price_Filter));
-		handler.moveToElement(bookshelvespagelocator_Obj.price_Filter).perform();
+		handler.moveToElement(bookshelvespagelocator_Obj.price_Filter).build().perform();
 	}
 
 	//Check for Right Dragger 
@@ -51,7 +51,7 @@ public class BookshelvesPageActions {
 	}
 	//Drag And Set the Price to 15000
 	public void DragAndSet() {
-		handler.dragAndDropBy(bookshelvespagelocator_Obj.Right_Dragger, -211, 0).perform();
+		handler.dragAndDropBy(bookshelvespagelocator_Obj.Right_Dragger, -211, 0).build().perform();
 
 	}
 	//Check For Category Filter
@@ -61,14 +61,9 @@ public class BookshelvesPageActions {
 
 	//Mouse Hover to Category 
 	public void MoveToCategory() {
-		HelperClass.getWait(20).until(ExpectedConditions.visibilityOf(bookshelvespagelocator_Obj.category_Filter));
+		
+		HelperClass.sleep(2000);
 		handler.moveToElement(bookshelvespagelocator_Obj.category_Filter).build().perform();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 	}
 	//Check For WallShelves or  Kid Bookshelves 
@@ -81,7 +76,7 @@ public class BookshelvesPageActions {
 	//Click  WallShelves or  Kid Bookshelves 
 	public void ClickItems() {
 		try {
-			Thread.sleep(2000);
+			HelperClass.sleep(2000);
 			bookshelvespagelocator_Obj.Kid_Bookshelves_CheckBox.click();
 		}catch (Exception e) {
 
@@ -103,7 +98,7 @@ public class BookshelvesPageActions {
 	}
 	//House Hover to DropDown
 	public void MovetoDropDown() {
-		handler.moveToElement(bookshelvespagelocator_Obj.SortBy_DropDown).perform();;
+		handler.moveToElement(bookshelvespagelocator_Obj.SortBy_DropDown).build().perform();;
 	}
 	//Check For High To Low Option
 	public boolean CheckHightoLow() {

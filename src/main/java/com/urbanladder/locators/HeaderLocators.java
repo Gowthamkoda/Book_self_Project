@@ -19,7 +19,7 @@ public class HeaderLocators {
 	//Chair
 	@FindBy(xpath="(//ul[@class='inline-list left']//div)[6]/a") public WebElement Chair_Menu;
 	//Chair SubMenu
-	@FindBy(xpath="//ul[@class='taxonslist'])[6]//span") public List<WebElement> Chair_SubMenu;
+	@FindBy(xpath="(//*[@class='taxonslist'])[6]/li/a/span") public List<WebElement> Chair_SubMenu;
 	
 	//Living Storage
 	@FindBy(xpath="(//ul[@class='inline-list left']//div)[8]/a") public WebElement LivingStorage_Menu;
