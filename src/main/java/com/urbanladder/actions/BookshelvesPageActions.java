@@ -8,23 +8,23 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.urbanladder.locators.BookshelvesPageLocators;
-import com.urbanladder.utils.HelperClass;
+import com.urbanladder.utils.BaseClass;
 
 public class BookshelvesPageActions {
 	
-	Actions handler = HelperClass.getHandler();
+	Actions handler = BaseClass.getHandler();
 	BookshelvesPageLocators bookshelvespagelocator_Obj = null;
 
 
 	public BookshelvesPageActions() {
 		this.bookshelvespagelocator_Obj = new BookshelvesPageLocators();
-		PageFactory.initElements(HelperClass.getDriver(),bookshelvespagelocator_Obj);
+		PageFactory.initElements(BaseClass.getDriver(),bookshelvespagelocator_Obj);
 
 	}
-
+//Check for BookShelves Page
 	public boolean checkBookShelfUrl() {
 
-		return HelperClass.getWait(10).until(ExpectedConditions.urlContains("BookShelves"));
+		return BaseClass.getWait(10).until(ExpectedConditions.urlContains("BookShelves"));
 
 	}
 	//Check for Popup 
@@ -41,7 +41,7 @@ public class BookshelvesPageActions {
 	}
 	//MouseHover to Prize Filter 
 	public void MovetoPrizeFilter() {
-		HelperClass.getWait(20).until(ExpectedConditions.visibilityOf(bookshelvespagelocator_Obj.price_Filter));
+		BaseClass.getWait(20).until(ExpectedConditions.visibilityOf(bookshelvespagelocator_Obj.price_Filter));
 		handler.moveToElement(bookshelvespagelocator_Obj.price_Filter).build().perform();
 	}
 
@@ -62,7 +62,7 @@ public class BookshelvesPageActions {
 	//Mouse Hover to Category 
 	public void MoveToCategory() {
 		
-		HelperClass.sleep(2000);
+		BaseClass.sleep(2000);
 		handler.moveToElement(bookshelvespagelocator_Obj.category_Filter).build().perform();
 
 	}
@@ -76,7 +76,7 @@ public class BookshelvesPageActions {
 	//Click  WallShelves or  Kid Bookshelves 
 	public void ClickItems() {
 		try {
-			HelperClass.sleep(2000);
+			BaseClass.sleep(2000);
 			bookshelvespagelocator_Obj.Kid_Bookshelves_CheckBox.click();
 		}catch (Exception e) {
 

@@ -7,17 +7,17 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.urbanladder.locators.HeaderLocators;
-import com.urbanladder.utils.HelperClass;
+import com.urbanladder.utils.BaseClass;
 
 public class HeaderActions {
 	
-	Actions handler = HelperClass.getHandler() ;
+	Actions handler = BaseClass.getHandler() ;
 	HeaderLocators headerLocators_Obj= null;
 	//Constructor   
 	public HeaderActions() {
 
 		this.headerLocators_Obj = new HeaderLocators();
-		PageFactory.initElements(HelperClass.getDriver(),headerLocators_Obj);
+		PageFactory.initElements(BaseClass.getDriver(),headerLocators_Obj);
 	}
 
 	//1)Checks for Search Input 
@@ -45,9 +45,9 @@ public class HeaderActions {
 	//Mouse Hover to living
 	public void MoveToLivngLabel(){
 		handler.scrollToElement(headerLocators_Obj.giftCardS_Link).build().perform();
-		HelperClass.sleep(2000);
+		BaseClass.sleep(2000);
 		handler.moveToElement(headerLocators_Obj.living_Label).build().perform();
-		HelperClass.sleep(2000);
+		BaseClass.sleep(2000);
 	}
 
 	//4)Check for Chair and SubMenu

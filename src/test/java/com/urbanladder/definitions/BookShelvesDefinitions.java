@@ -3,10 +3,9 @@ package com.urbanladder.definitions;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import com.urbanladder.actions.BookshelvesPageActions;
-import com.urbanladder.utils.HelperClass;
+import com.urbanladder.utils.BaseClass;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -37,14 +36,14 @@ public class BookShelvesDefinitions {
 	}
 	@Given("Select anyone Category \\(like Wall Shelves \\/ Kid Bookshelves \\/ Study Tables, etc)")
 	public void select_anyone_category_like_wall_shelves_kid_bookshelves_study_tables_etc() {
-		HelperClass.sleep(2000);
+		BaseClass.sleep(2000);
 		bookshelvespageactionsObj.MoveToCategory();
 		bookshelvespageactionsObj.ClickItems();
 		
 	}
 	@Given("Sort by price High to Low")
 	public void sort_by_price() {
-		HelperClass.sleep(2000);
+		BaseClass.sleep(2000);
 		bookshelvespageactionsObj.MovetoDropDown();
 		bookshelvespageactionsObj.ClickHighToLow();
 		
@@ -67,6 +66,6 @@ public class BookShelvesDefinitions {
 			System.out.println("OriginalPrice: "+OriginalPrice.get(i).getText());
 			System.out.println("EMiFrom "+EMiFrom.get(i).getText()+"\n");
 			}
-		HelperClass.sleep(2000);
+		BaseClass.sleep(2000);
 	}
 }

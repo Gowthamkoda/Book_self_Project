@@ -1,4 +1,4 @@
-Feature: BookShelf Scenarios in UrbanLadder Application
+Feature: BookShelf Page Scenarios
 
   Scenario: Search BookShelves and Display the Results
     Given Filter  Bookshelves below Rs15000

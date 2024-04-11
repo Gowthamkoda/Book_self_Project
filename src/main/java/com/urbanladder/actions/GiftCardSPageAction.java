@@ -4,7 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.urbanladder.locators.GiftCardSPageLocators;
-import com.urbanladder.utils.HelperClass;
+import com.urbanladder.utils.BaseClass;
 
 public class GiftCardSPageAction {
 	GiftCardSPageLocators giftcardspageLocators_Obj = null;
@@ -13,7 +13,7 @@ public class GiftCardSPageAction {
 	//Constructor
 	public GiftCardSPageAction() {
 		this.giftcardspageLocators_Obj=new GiftCardSPageLocators();
-		PageFactory.initElements(HelperClass.getDriver(), giftcardspageLocators_Obj);
+		PageFactory.initElements(BaseClass.getDriver(), giftcardspageLocators_Obj);
 	}
 	//Check for GiftCard Label Link
 	public boolean CheckGiftCardLabel() {
@@ -139,9 +139,9 @@ public class GiftCardSPageAction {
 	}
 	//Click On Confirm Button
 	public void ClickOnConfirm() {
-		HelperClass.getHandler().scrollToElement(giftcardspageLocators_Obj.Confirm_button);
-		HelperClass.sleep(2000);
+		BaseClass.getHandler().scrollToElement(giftcardspageLocators_Obj.Confirm_button);
+		BaseClass.sleep(2000);
 		giftcardspageLocators_Obj.Confirm_button.click();
-		HelperClass.sleep(2000);
+		BaseClass.sleep(2000);
 	}
 }
