@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 #This Project written by Team: Phantom Troupe 
+=======
+# ExtentReport_Cucumber_TestNG_Demo
+**#This framework generates Extent Report using Cucumber, Selenium and TestNG.**
+>>>>>>> d1feb749536773e7cf120ab1a0426d4614d2fc93
 
-**#This framework uses the below mentioned dependencies**
+*#This framework uses the below mentioned dependencies*
 ```
 1. Cucumber - 7.14.0
 2. Selenium - 4.15.0
