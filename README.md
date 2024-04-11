@@ -1,7 +1,7 @@
 # ExtentReport_Cucumber_TestNG_Demo
-_This framework generates Extent Report using Cucumber, Selenium and TestNG.
+**#This framework generates Extent Report using Cucumber, Selenium and TestNG.**
 
-**#This framework uses the below mentioned dependencies**
+*#This framework uses the below mentioned dependencies*
 ```
 1. Cucumber - 7.14.0
 2. Selenium - 4.15.0
