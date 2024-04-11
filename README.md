@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
-#This Project written by Team: Phantom Troupe 
-=======
-# ExtentReport_Cucumber_TestNG_Demo
-**#This framework generates Extent Report using Cucumber, Selenium and TestNG.**
->>>>>>> d1feb749536773e7cf120ab1a0426d4614d2fc93
-
+**This Project written by Team: Phantom Troupe**
+-------------------------------------------------------
 *#This framework uses the below mentioned dependencies*
 ```
 1. Cucumber - 7.14.0
@@ -18,8 +13,8 @@
 8. Java 17
 
 ```
-   
 Extent Report will be generated under ExtentReport folder. 
+------------------------------------------------------------
 
 **#Display Bookshelves**
 *Problem Statement : Display Bookshelves*
