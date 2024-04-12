@@ -66,6 +66,6 @@ public class BookShelvesDefinitions {
 			System.out.println("OriginalPrice: "+OriginalPrice.get(i).getText());
 			System.out.println("EMiFrom "+EMiFrom.get(i).getText()+"\n");
 			}
-		BaseClass.sleep(2000);
+		BaseClass.sleep(5000);
 	}
 }
