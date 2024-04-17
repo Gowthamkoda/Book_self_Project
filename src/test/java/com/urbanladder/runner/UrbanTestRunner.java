@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		dryRun = !true,
+		tags ="@smoke or @regression",
 		features = {"src/test/resources/features"},
 		glue = "com.urbanladder.definitions",
 		plugin = {"html:Reports/myreport.html",
@@ -16,3 +17,4 @@ import io.cucumber.testng.CucumberOptions;
 public class UrbanTestRunner extends AbstractTestNGCucumberTests {
 
 }
+  

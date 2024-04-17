@@ -1,5 +1,6 @@
 Feature: Gift-Card Page Scenarios
 
+  @regression
   Scenario Outline: Enter Gift Card Details
     Given navigate to home page
     And Click on GiftCards Label
@@ -13,3 +14,6 @@ Feature: Gift-Card Page Scenarios
       | Amount | To_name | To_Email | To_Phone | From_name | From_Email | From_Phone | Address | Pincode | Message |
       |      1 |       1 |        1 |        1 |         1 |          1 |          1 |       1 |       1 | Invalid |
       |      2 |       2 |        2 |        2 |         2 |          2 |          2 |       2 |       2 | Valid   |
+
+      
+      

@@ -1,5 +1,6 @@
 Feature: BookShelf Page Scenarios
-
+	
+	@regression
   Scenario: Search BookShelves and Display the Results
     Given Filter  Bookshelves below Rs15000
     And exclude out of stock
